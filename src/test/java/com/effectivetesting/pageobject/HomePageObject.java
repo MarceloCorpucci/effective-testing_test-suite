@@ -23,4 +23,9 @@ public class HomePageObject {
 		
 		return new EntryListPageObject(driver);
 	}
+	
+
+	public String getLoginResult() {
+		return driver.findElement(By.xpath("//*[@id=\"notification\"]/span")).getText();
+	}
 }

@@ -20,14 +20,14 @@ import cucumber.api.java.es.Cuando;
 import cucumber.api.java.es.Dado;
 import cucumber.api.java.es.Entonces;
 
-public class DraftEntryGlue {
+public class DraftEntryGlue {	
 	private WebDriver driver;
 	private LoginPageObject loginPage;
 	private HomePageObject homePage;
 	private EntryCreationPageObject entryCreationPage;
 	private String createdEntry;
 	
-	@Before
+	@Before("~@wip")
 	public void setUp() {
 		System.setProperty("webdriver.chrome.driver", "C:\\ChromeDriver\\chromedriver.exe");
 		driver = new ChromeDriver();
@@ -41,7 +41,7 @@ public class DraftEntryGlue {
 		UserInjector.create(user);
 	}
 	
-	@After
+	@After("~@wip")
 	public void teardDown() {
 		EntryInjector.erase();
 		UserInjector.erase(TestGlobal.USER_ID);

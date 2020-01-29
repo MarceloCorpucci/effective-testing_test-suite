@@ -38,4 +38,17 @@ public class LoginPageObject {
 
 		return new HomePageObject(driver);
 	}
+
+	public String getEmailOrPassError() {
+		return driver.findElement(By.xpath("//*[@id=\"content_title\"]/form/div[1]/div/span[2]")).getText();
+	}
+
+	public String getDeactivatedUserError() {
+		return driver.findElement(By.xpath("//*[@id=\"notification\"]/span")).getText();
+	}
+
+	public String getRequiredPassError() {
+		return driver.findElement(By.xpath("//*[@id=\"content_title\"]/form/div[2]/div/span[2]")).getText();
+	}
+
 }
