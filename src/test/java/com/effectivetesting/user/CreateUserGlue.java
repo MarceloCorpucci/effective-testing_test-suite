@@ -12,7 +12,7 @@ import cucumber.api.java.es.Entonces;
 import io.restassured.specification.RequestSpecification;
 
 public class CreateUserGlue {
-	private static final String DEFAULT_BASE_URL = "http://localhost:5000/api";
+	private static final String DEFAULT_BASE_URL = "http://effective-testing.herokuapp.com/api";
 	private static final String ID = "23";
 	RequestSpecification request;
 	
